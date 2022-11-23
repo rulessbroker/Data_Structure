@@ -11,7 +11,6 @@ public class LinkedList {
 
 		if (head == null) {
 			head = newNode;
-			System.out.println("List is empty.");
 		} else {
 			Node temp = head;
 			while (temp.next != null) {
@@ -25,7 +24,7 @@ public class LinkedList {
 		Node node = head;
 
 		while (node.next != null) {
-			System.out.println(node.data);
+			System.out.print(node.data + "->");
 			node = node.next;
 		}
 		System.out.print(node.data);
@@ -51,6 +50,23 @@ public class LinkedList {
 			while (temp.next != null) {
 				temp = temp.next;
 			}
+			temp.next = newNode;
+		}
+	}
+
+	public void insertInBetween(int index, int data) {
+		Node newNode = new Node();
+		newNode.data = data;
+		newNode.next = null;
+
+		if (index == 0) {
+			insertAtStart(data);
+		} else {
+			Node temp = head;
+			for (int i = 0; i < index - 1; i++) {
+				temp = temp.next;
+			}
+			newNode.next = temp.next;
 			temp.next = newNode;
 		}
 	}
