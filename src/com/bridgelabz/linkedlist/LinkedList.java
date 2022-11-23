@@ -29,4 +29,11 @@ public class LinkedList {
 		System.out.println(node.data);
 	}
 
+	public void insertAtStart(int data) {
+		Node newNode = new Node();
+		newNode.data = data;
+		newNode.next = null;
+		newNode.next = head;
+		head = newNode;
+	}
 }
