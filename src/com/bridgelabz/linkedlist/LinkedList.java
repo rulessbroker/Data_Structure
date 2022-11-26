@@ -45,10 +45,19 @@ public class LinkedList {
 			tail = newNode;
 		}
 	}
-	
-	public void insertInBetween(Node previousNode ,Node newNode){
-        Node tempNode = previousNode.next;
-        previousNode.next = newNode;
-        newNode.next = tempNode;
-    }
+
+	public void insertInBetween(Node previousNode, Node newNode) {
+		Node tempNode = previousNode.next;
+		previousNode.next = newNode;
+		newNode.next = tempNode;
+	}
+
+	public void pop() {
+		if (this.head == null) {
+			
+		}
+		Node temp = head;
+		head = temp.next;
+		temp = null;
+	}
 }

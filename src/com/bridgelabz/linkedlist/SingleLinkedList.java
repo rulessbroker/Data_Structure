@@ -31,4 +31,17 @@ public class SingleLinkedList {
 		linkedList.print();
 
 	}
+
+	public static void pop() {
+		LinkedList linkedList = new LinkedList();
+		Node firstNode = linkedList.push(70);
+		Node secondNode = linkedList.push(30);
+		Node newNode = linkedList.push(56);
+		System.out.println("Before");
+		linkedList.print();
+		linkedList.pop();
+		System.out.println();
+		System.out.println("After");
+		linkedList.print();
+	}
 }
