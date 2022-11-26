@@ -2,13 +2,13 @@ package com.bridgelabz.linkedlist;
 
 public class SingleLinkedList {
 
-	public static void main(String[] args) {
+	public static void addDataAtStart() {
 		LinkedList list = new LinkedList();
 
-		list.insert(70);
+		list.push(70);
 		list.insertAtStart(30);
 		list.insertAtStart(56);
 
-		list.show();
+		list.print();
 	}
 }

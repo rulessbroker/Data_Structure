@@ -1,36 +1,34 @@
 package com.bridgelabz.linkedlist;
 
 public class LinkedList {
+
 	Node head;
+	Node tail;
 
-	public void insert(int data) {
-		Node newNode = new Node();
-		newNode.data = data;
-		newNode.next = null;
-
+	public Node push(int data) {
+		Node newNode = new Node(data);
 		if (head == null) {
 			head = newNode;
 		} else {
 			Node temp = head;
-			while (temp.next != null) {
-				temp = temp.next;
-			}
-			temp.next = newNode;
+			this.head = newNode;
+			newNode.next = temp;
 		}
+		return newNode;
 	}
 
-	public void show() {
+	public void print() {
 		Node node = head;
 
 		while (node.next != null) {
-			System.out.println(node.data);
+			System.out.print(node.data + "->");
 			node = node.next;
 		}
 		System.out.println(node.data);
 	}
 
 	public void insertAtStart(int data) {
-		Node newNode = new Node();
+		Node newNode = new Node(data);
 		newNode.data = data;
 		newNode.next = null;
 		newNode.next = head;
